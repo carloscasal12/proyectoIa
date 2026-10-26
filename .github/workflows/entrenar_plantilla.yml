@@ -1,0 +1,24 @@
+name: Entrenar modelo para la plantilla P2
+on:
+  push:
+    paths: ['entrenar_plantilla.py', '.github/workflows/entrenar_plantilla.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  entrenar:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - run: python -m pip install pandas==3.0.6 scikit-learn==1.9.1 joblib==1.6.0
+      - run: python entrenar_plantilla.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: modelo-plantilla-p2
+          path: |
+            modelo_california.pkl
+            metricas_entrenamiento.json
+            datos/california_housing.csv
