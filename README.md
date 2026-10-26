@@ -1,18 +1,18 @@
-# California Housing API — Carlos Casal P2 — segundo integrante pendiente
-1. Crear una cuenta personal de GitHub y una cuenta de Render.
-2. Reunir los archivos de ejercicios 2-6 en la raíz del repositorio público, conservando datos/housing.csv; subirlos a GitHub.
-3. El código de entrenamiento está en entrenar_modelo.py; el modelo conserva el Pipeline de P1.
-4. En Render, crear un Web Service y conectar ese repositorio y su rama main.
-5. Seleccionar Python y la instancia Free; fijar PYTHON_VERSION=3.14.5.
-6. Comando de construcción: `pip install -r requirements.txt`.
-7. Comando de inicio: `gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 120`.
-8. Configurar GITHUB_REPOSITORY=carloscasal12/proyectoIa y MODEL_REF=main o el commit del modelo.
-9. La descarga desde GitHub solo se realiza si falta el modelo local y valida su SHA-256.
-10. Esperar a que Render confirme el despliegue y verificar `GET /`.
-11. Enviar ejemplo_peticion.json a `POST /predict` con Content-Type: application/json.
-12. Ejecutar `python medir_tiempos.py URL_REAL_RENDER` para guardar cinco mediciones reales.
-13. Capturar repositorio, conexión, configuración, health-check y predicción con «Carlos Casal P2».
-14. URL final: PENDIENTE DE DESPLIEGUE REAL EN RENDER.
-15. Repositorio público: https://github.com/carloscasal12/proyectoIa (pendiente de subir los archivos).
-16. El servicio estima el valor mediano por zona censal en USD; no tasa viviendas individuales.
-17. Los datos históricos y los sesgos geográficos limitan el uso de las predicciones.
+# California Housing API — Carlos Casal P2
+1. Se creó la cuenta de Render y se autorizó la conexión con GitHub.
+2. Repositorio público: https://github.com/carloscasal12/proyectoIa
+3. Se subieron entrenamiento, modelo, dataset, API y dependencias a la rama main.
+4. El entrenamiento reproducible está en entrenar_modelo.py y usa datos/housing.csv.
+5. Se creó un Blueprint en Render a partir de render.yaml.
+6. Se configuró Python 3.14.5 y una instancia Free.
+7. Construcción: `pip install -r requirements.txt`.
+8. Inicio: `gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 120`.
+9. Variables: GITHUB_REPOSITORY=carloscasal12/proyectoIa y MODEL_REF=main.
+10. El servicio alcanzó el estado Live y publicó una URL HTTPS.
+11. URL final: https://california-housing-carlos-casal-p2.onrender.com
+12. GET / comprueba el estado y confirma que el modelo está cargado.
+13. POST /predict recibe el JSON de ejemplo_peticion.json y devuelve una predicción en USD.
+14. Se ejecutó medir_tiempos.py contra Render: cinco peticiones HTTP 200 con respuesta válida.
+15. Se verificó la descarga real del modelo desde GitHub con destino inicialmente inexistente.
+16. La descarga valida SHA-256 antes de cargar el modelo mediante joblib.
+17. Las predicciones describen zonas censales; los datos históricos pueden introducir sesgos.
