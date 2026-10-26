@@ -1,0 +1,17 @@
+{
+  "mae_cientos_miles_usd": 0.3313777979129735,
+  "filas_entrenamiento": 16512,
+  "filas_prueba": 4128,
+  "variables": [
+    "MedInc",
+    "HouseAge",
+    "AveRooms",
+    "AveBedrms",
+    "Population",
+    "AveOccup",
+    "Latitude",
+    "Longitude"
+  ],
+  "unidad": "100000 USD",
+  "sha256_modelo": "f98b9a39c93a6356a6b70c642564433f90fb7de7ebf485d3362ba7ce380ee880"
+}
