@@ -1,4 +1,4 @@
-# California Housing API — Carlos Casal y nombre apellido P2
+# California Housing API — Carlos Casal P2 — segundo integrante pendiente
 1. Crear una cuenta personal de GitHub y una cuenta de Render.
 2. Reunir los archivos de ejercicios 2-6 en la raíz del repositorio público, conservando datos/housing.csv; subirlos a GitHub.
 3. El código de entrenamiento está en entrenar_modelo.py; el modelo conserva el Pipeline de P1.
