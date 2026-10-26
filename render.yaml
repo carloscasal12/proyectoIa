@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: california-housing-carlos-casal-p2
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 120
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.5
+      - key: GITHUB_REPOSITORY
+        value: carloscasal12/proyectoIa
+      - key: MODEL_REF
+        value: main
+      - key: OMP_NUM_THREADS
+        value: '1'
+      - key: OPENBLAS_NUM_THREADS
+        value: '1'
