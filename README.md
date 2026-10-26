@@ -1,5 +1,5 @@
 # Predicción del precio de casas en California (servicio web)
-Autores: Carlos Casal; segundo integrante pendiente de identificar.
+Autores: Carlos Casal; Jorge del Hoyo Ballestin.
 ## Contenido del repositorio
 FastAPI app.py, modelo_california.pkl, entrenar_modelo.py, requirements.txt y medir_tiempos.py.
 El modelo utiliza las ocho variables de la plantilla y predice MedHouseVal en unidades de 100000 USD.

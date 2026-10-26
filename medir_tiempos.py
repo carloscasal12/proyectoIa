@@ -1,7 +1,7 @@
 """Medición del tiempo de respuesta del servicio desplegado.
 
 Solo tienes que poner la URL de tu servicio en BASE_URL y ejecutar el script.
-Autores: Carlos Casal; segundo integrante pendiente de identificar
+Autores: Carlos Casal; Jorge del Hoyo Ballestin
 
 Nota: en el plan gratuito de Render el servicio se "duerme" tras un rato sin
 tráfico, así que la primera petición puede tardar mucho más (arranque en frío).

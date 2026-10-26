@@ -2,7 +2,7 @@
 
 Solo tienes que completar las partes marcadas con TODO.
 El resto del código ya está hecho.
-Autores: Carlos Casal; segundo integrante pendiente de identificar
+Autores: Carlos Casal; Jorge del Hoyo Ballestin
 
 Ejecución en local (con modelo_california.pkl generado en el ejercicio 1):
     uvicorn app:app --reload
