@@ -1,6 +1,6 @@
 # Precio de casas en California — P3
 
-Autores: Carlos Casal; Jorge del Hoyo Ballestin.
+Autores: Carlos Casal Millan; Jorge del Hoyo Ballestín.
 
 ## Servicios reales en Render
 
