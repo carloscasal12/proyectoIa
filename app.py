@@ -15,7 +15,10 @@ from pydantic import BaseModel
 
 model = joblib.load("modelo_california.pkl")
 
-app = FastAPI(title="Precio de casas en California")
+app = FastAPI(
+    title="Precio de casas en California",
+    description="Carlos Casal Millan; Jorge del Hoyo Ballestín - P3",
+)
 
 
 class HouseFeatures(BaseModel):
