@@ -1,19 +1,25 @@
 services:
   - type: web
-    name: california-housing-carlos-casal-p2
+    name: california-carlos-p3-api
     runtime: python
     plan: free
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt -c constraints.txt
     startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /
     envVars:
       - key: PYTHON_VERSION
         value: 3.14.5
-      - key: GITHUB_REPOSITORY
-        value: carloscasal12/proyectoIa
-      - key: MODEL_REF
-        value: main
       - key: OMP_NUM_THREADS
         value: '1'
       - key: OPENBLAS_NUM_THREADS
         value: '1'
+  - type: web
+    name: california-carlos-p3-web
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt -c constraints.txt
+    startCommand: streamlit run streamlit_app.py --server.address 0.0.0.0 --server.port $PORT --server.headless true
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.5
